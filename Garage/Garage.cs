@@ -29,11 +29,12 @@ namespace Garage
             Car car = cars.Where(i => i.CarID == id).FirstOrDefault();
             return $"ID: {car.CarID} - Brand: {car.Brand} - Model: {car.Model}";
         }
-        public Car SletBil(int id, List<Car> cars)
+        public string SletBil(int id, List<Car> cars)
         {
-            Car car;
-            cars.Remove(car = cars.Where(i => i.CarID == id).FirstOrDefault());
-            return car;
+            Car car = cars.Where(i => i.CarID == id).FirstOrDefault();
+            string returnValue = $"Slettede bil:\n ID: {car.CarID}\nMærke: {car.Brand}\nModel: {car.Model}";
+            cars.Remove(car);
+            return returnValue;
         }
     }
 }
