@@ -32,7 +32,7 @@ namespace Garage
         public string SletBil(int id, List<Car> cars)
         {
             Car car = cars.Where(i => i.CarID == id).FirstOrDefault();
-            string returnValue = $"Slettede bil:\n ID: {car.CarID}\nMærke: {car.Brand}\nModel: {car.Model}";
+            string returnValue = $"Slettede bil:\nID: {car.CarID}\nMærke: {car.Brand}\nModel: {car.Model}";
             cars.Remove(car);
             return returnValue;
         }

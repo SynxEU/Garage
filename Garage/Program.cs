@@ -52,7 +52,7 @@
                         } while (createLoop == true);
                         break;
                     case ConsoleKey.D:
-                        Console.WriteLine("Indtast et bil ID: ");
+                        Console.Write("Indtast et bil ID: ");
                         id = int.Parse(Console.ReadLine());
                         Console.WriteLine(garage.SletBil(id, cars));
                         break;
@@ -61,7 +61,7 @@
                         Console.WriteLine(garage.UdlæsBil(cars));
                         break;
                     case ConsoleKey.F:
-                        Console.WriteLine("Indtast et bil ID: ");
+                        Console.Write("Indtast et bil ID: ");
                         id = int.Parse(Console.ReadLine());
                         Console.WriteLine(garage.FindBil(id, cars));
                         break;
